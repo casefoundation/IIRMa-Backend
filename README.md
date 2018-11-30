@@ -1,4 +1,5 @@
-# Networkmap
+# Investment Visualization Toolkit Backend
+
 This project pretend to provide a centralized data of companies and investors, gathered from various data sources and present it as graph for consulting.
 
 ## Getting started

@@ -2,6 +2,8 @@
 
 This project pretend to provide a centralized data of companies and investors, gathered from various data sources and present it as graph for consulting.
 
+Please see the project's [main page](https://github.com/casefoundation/Investment-Visualization-Toolkit) for more information.
+
 ## Getting started
 This guide pretend to explain how to deploy the api server on a standard hardware.
 

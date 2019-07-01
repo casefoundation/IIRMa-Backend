@@ -25,5 +25,5 @@ laradock/
 public/uploads
 storage/uploads
 
-public/*
+# public/*
 .DS_Store

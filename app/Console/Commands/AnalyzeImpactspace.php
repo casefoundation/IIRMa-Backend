@@ -18,7 +18,7 @@ class AnalyzeImpactspace extends AnalyzeCommand
 	protected $name = 'impactspace:analyze';
 	
 	protected $signature = 'impactspace:analyze 
-        {--force_update} {--entity-type=} {--file=} {--file-type=} {--replace-data=}
+        {--force_update} {--entity-type=} {--file=} {--file-type=} {--replace-data=} {--fo-types=}
     ';
 	
 	protected $description = 'Analyze data from Impactspace';
@@ -565,6 +565,14 @@ class AnalyzeImpactspace extends AnalyzeCommand
 	private function processFinorg($row)
 	{
 		$weight = 1;
+
+		$allowed_types = $this->option('fo-types');
+		if(!empty($allowed_types)) {
+			$allowed_types = explode(",", $allowed_types);
+			if (!in_array($row->fo_type, $allowed_types)) {
+				return 0;
+			}
+		}
 		
 		try {
 			$investor = Investor::where('impactspace_id', '=', $row->id)->first();
